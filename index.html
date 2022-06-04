@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        :root {
+            --base-color: '#2fa4e7';
+            --border-color: '#dd5600';
+        }
+
+        table,
+        th,
+        td {
+            border: 0.5px solid rgb(222, 222, 222);
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        .tkb:hover .more {
+            display: block;
+        }
+
+        .more {
+            display: none;
+            background-color: rgba(0, 0, 0, 0.66);
+            color: white;
+            z-index: 10;
+        }
+
+        .more::before {
+            content: "";
+            border: 8px solid;
+            border-color: transparent transparent black transparent;
+            position: absolute;
+            top: -16px;
+            left: 45%;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        base: '#2fa4e7',
+                        cborder: '#dd5600',
+                        tkb: '#732d00',
+                        bg: '#f8ddcc'
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+          .content-auto {
+            content-visibility: auto;
+          }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="h-max w-max border-solid m-auto mt-5">
+        <table class="cursor-pointer">
+            <tr class="h-7">
+                <td class="text-base px-2"><i class="fa fa-long-arrow-left"></i> Trước</td>
+                <td class="bg-base text-white px-10">Thứ 2</td>
+                <td class="bg-base text-white px-10">Thứ 3</td>
+                <td class="bg-base text-white px-10">Thứ 4</td>
+                <td class="bg-base text-white px-10">Thứ 5</td>
+                <td class="bg-base text-white px-10">Thứ 6</td>
+                <td class="bg-base text-white px-10">Thứ 7</td>
+                <td class="bg-base text-white px-10">Chủ Nhật</td>
+                <td class="text-base px-2">Sau <i class="fa fa-long-arrow-right"></i></td>
+            </tr>
+            <tr class="h-7">
+                <td class="bg-base text-white px-2">Tiết 1</td>
+                <td class="px-10"></td>
+                <td class="px-10"></td>
+                <td class="px-1 text-tkb bg-bg relative tkb" rowspan="3" style="border: 1.6px solid #dd5600;">
+                    <div class="w-40 h-full text-left" style="line-height: 15px; font-size: 13px;">
+                        <p><b>Trí tuệ nhân tạo + BTL (7080112)</b></p>
+                        <p><b>Nhóm:</b> 11</p>
+                        <p><b>Phòng:</b> HNBG107 - Giảng đường 107 khu B</p>
+                        <p><b>GV:</b> Lê Văn Hưng</p>
+                    </div>
+                    <div class="absolute h-max w-full top-0 left-0 rounded-sm more text-xs text-left px-1 py-2" style="margin-top: 58%;">
+                        <p>Trí tuệ nhân tạo + BTL (7080112)</p>
+                        <p>Nhóm: 11</p>
+                        <p>Phòng: HNBG107 - Giảng đường 107 khu B</p>
+                        <p>GV: Lê Văn Hưng</p>
+                    </div>
+                </td>
+                <td class="px-10"></td>
+                <td class="px-10"></td>
+                <td class="px-10"></td>
+                <td class="px-10"></td>
+                <td class="bg-base px-2"></td>
+            </tr>
+            <tr class="h-7">
+                <td class="bg-base text-white px-2">Tiết 2</td>
+                <td class="px-10"></td>
+                <td class="px-10"></td>
+                <td class="px-10"></td>
+                <td class="px-10"></td>
+                <td class="px-10"></td>
+                <td class="px-10"></td>
+                <td class="bg-base px-2"></td>
+            </tr>
+            <tr class="h-7">
+                <td class="bg-base text-white px-2">Tiết 3</td>
+                <td class="px-10"></td>
+                <td class="px-10"></td>
+                <td class="px-10"></td>
+                <td class="px-10"></td>
+                <td class="px-10"></td>
+                <td class="px-10"></td>
+                <td class="bg-base px-2"></td>
+            </tr>
+            <tr class="h-7">
+                <td class="bg-base text-white px-2">Tiết 4</td>
+                <td class="px-1 text-tkb bg-bg tkb relative" rowspan="2" style="border: 1.6px solid #dd5600;">
+                    <div class="w-40 h-full text-left" style="line-height: 15px; font-size: 13px;">
+                        <p><b>Phát triển ứng dụng IoT (7080517)</b></p>
+                        <p><b>Nhóm:</b> 05</p>
+                        <p><b>Phòng:</b> HNBG305 - Giảng đường 305 khu B</p>
+                        <p><b>GV:</b> Nguyễn Duy Huy</p>
+                    </div>
+                    <div class="absolute h-max w-full top-0 left-0 rounded-sm more text-xs text-left px-1 py-2" style="margin-top: 58%;">
+                        <p>Trí tuệ nhân tạo + BTL (7080112)</p>
+                        <p>Nhóm: 11</p>
+                        <p>Phòng: HNBG107 - Giảng đường 107 khu B</p>
+                        <p>GV: Lê Văn Hưng</p>
+                    </div>
+                </td>
+                <td class="px-10"></td>
+                <td class="px-10"></td>
+                <td class="px-10"></td>
+                <td class="px-1 text-tkb bg-bg tkb relative" rowspan="2" style="border: 1.6px solid #dd5600;">
+                    <div class="w-40 h-full text-left" style="line-height: 15px; font-size: 13px;">
+                        <p><b>Phát triển ứng dụng IoT (7080517)</b></p>
+                        <p><b>Nhóm:</b> 05</p>
+                        <p><b>Phòng:</b> HNBG305 - Giảng đường 305 khu B</p>
+                        <p><b>GV:</b> Nguyễn Duy Huy</p>
+                    </div>
+                    <div class="absolute h-max w-full top-0 left-0 rounded-sm more text-xs text-left px-1 py-2" style="margin-top: 58%;">
+                        <p>Trí tuệ nhân tạo + BTL (7080112)</p>
+                        <p>Nhóm: 11</p>
+                        <p>Phòng: HNBG107 - Giảng đường 107 khu B</p>
+                        <p>GV: Lê Văn Hưng</p>
+                    </div>
+                </td>
+                <td class="px-10"></td>
+                <td class="px-10"></td>
+                <td class="bg-base px-2"></td>
+            </tr>
+            <tr class="h-7">
+                <td class="bg-base text-white px-2">Tiết 5</td>
+                <td class="px-10"></td>
+                <td class="px-10"></td>
+                <td class="px-10"></td>
+                <td class="px-10"></td>
+                <td class="px-10"></td>
+                <td class="bg-base px-2"></td>
+            </tr>
+            <tr class="h-7">
+                <td class="bg-base text-white px-2">Tiết 6</td>
+                <td class="px-1 text-tkb bg-bg tkb relative" rowspan="3" style="border: 1.6px solid #dd5600;">
+                    <div class="w-40 h-full text-left" style="line-height: 15px; font-size: 13px;">
+                        <p><b>Phát triển ứng dụng IoT (7080517)</b></p>
+                        <p><b>Nhóm:</b> 05</p>
+                        <p><b>Phòng:</b> HNBG305 - Giảng đường 305 khu B</p>
+                        <p><b>GV:</b> Nguyễn Duy Huy</p>
+                    </div>
+                    <div class="absolute h-max w-full top-0 left-0 rounded-sm more text-xs text-left px-1 py-2" style="margin-top: 58%;">
+                        <p>Trí tuệ nhân tạo + BTL (7080112)</p>
+                        <p>Nhóm: 11</p>
+                        <p>Phòng: HNBG107 - Giảng đường 107 khu B</p>
+                        <p>GV: Lê Văn Hưng</p>
+                    </div>
+                </td>
+                <td class="px-10"></td>
+                <td class="px-10"></td>
+                <td class="px-1 text-tkb bg-bg tkb relative" rowspan="3" style="border: 1.6px solid #dd5600;">
+                    <div class="w-40 h-full text-left" style="line-height: 15px; font-size: 13px;">
+                        <p><b>Lập trình .NET 2 + BTL (7080109)</b></p>
+                        <p><b>Nhóm:</b> 300</p>
+                        <p><b>Phòng:</b> HNAB502 - B502</p>
+                        <p><b>GV:</b> Ngô Hùng Long</p>
+                    </div>
+                    <div class="absolute h-max w-full top-0 left-0 rounded-sm more text-xs text-left px-1 py-2" style="margin-top: 58%;">
+                        <p>Trí tuệ nhân tạo + BTL (7080112)</p>
+                        <p>Nhóm: 11</p>
+                        <p>Phòng: HNBG107 - Giảng đường 107 khu B</p>
+                        <p>GV: Lê Văn Hưng</p>
+                    </div>
+                </td>
+                <td class="px-10"></td>
+                <td class="px-10"></td>
+                <td class="px-10"></td>
+                <td class="bg-base px-2"></td>
+            </tr>
+            <tr class="h-7">
+                <td class="bg-base text-white px-2">Tiết 7</td>
+                <td class="px-10"></td>
+                <td class="px-10"></td>
+                <td class="px-10"></td>
+                <td class="px-10"></td>
+                <td class="px-10"></td>
+                <td class="bg-base px-2"></td>
+            </tr>
+            <tr class="h-7">
+                <td class="bg-base text-white px-2">Tiết 8</td>
+                <td class="px-10"></td>
+                <td class="px-10"></td>
+                <td class="px-10"></td>
+                <td class="px-1 text-tkb bg-bg tkb relative" rowspan="3" style="border: 1.6px solid #dd5600;">
+                    <div class="w-40 h-full text-left" style="line-height: 15px; font-size: 13px;">
+                        <p><b>Chuẩn kỹ năng sử dụng Công Nghệ Thông tin (7080234)</b></p>
+                        <p><b>Nhóm:</b> 300</p>
+                        <p><b>Phòng:</b> HNAD303 - D3-3</p>
+                        <p><b>GV:</b> Vũ Lan Phương</p>
+                    </div>
+                    <div class="absolute h-max w-full top-0 left-0 rounded-sm more text-xs text-left px-1 py-2" style="margin-top: 58%;">
+                        <p>Trí tuệ nhân tạo + BTL (7080112)</p>
+                        <p>Nhóm: 11</p>
+                        <p>Phòng: HNBG107 - Giảng đường 107 khu B</p>
+                        <p>GV: Lê Văn Hưng</p>
+                    </div>
+                </td>
+                <td class="px-10"></td>
+                <td class="bg-base px-2"></td>
+            </tr>
+            <tr class="h-7">
+                <td class="bg-base text-white px-2">Tiết 9</td>
+                <td class="px-10"></td>
+                <td class="px-10"></td>
+                <td class="px-10"></td>
+                <td class="px-10"></td>
+                <td class="px-10"></td>
+                <td class="px-10"></td>
+                <td class="bg-base px-2"></td>
+            </tr>
+            <tr class="h-7">
+                <td class="bg-base text-white px-2">Tiết 10</td>
+                <td class="px-10"></td>
+                <td class="px-10"></td>
+                <td class="px-10"></td>
+                <td class="px-10"></td>
+                <td class="px-10"></td>
+                <td class="px-10"></td>
+                <td class="bg-base px-2"></td>
+            </tr>
+            <tr class="h-7">
+                <td class="bg-base text-white px-2">Tiết 11</td>
+                <td class="px-10"></td>
+                <td class="px-10"></td>
+                <td class="px-10"></td>
+                <td class="px-10"></td>
+                <td class="px-10"></td>
+                <td class="px-10"></td>
+                <td class="px-10"></td>
+                <td class="bg-base px-2"></td>
+            </tr>
+            <tr class="h-7">
+                <td class="bg-base text-white px-2">Tiết 12</td>
+                <td class="px-10"></td>
+                <td class="px-10"></td>
+                <td class="px-10"></td>
+                <td class="px-10"></td>
+                <td class="px-10"></td>
+                <td class="px-10"></td>
+                <td class="px-10"></td>
+                <td class="bg-base px-2"></td>
+            </tr>
+            <tr class="h-7">
+                <td class="bg-base text-white px-2">Tiết 13</td>
+                <td class="px-10"></td>
+                <td class="px-10"></td>
+                <td class="px-10"></td>
+                <td class="px-10"></td>
+                <td class="px-10"></td>
+                <td class="px-10"></td>
+                <td class="px-10"></td>
+                <td class="bg-base px-2"></td>
+            </tr>
+            <tr class="h-7">
+                <td class="bg-base text-white px-2">Tiết 14</td>
+                <td class="px-10"></td>
+                <td class="px-10"></td>
+                <td class="px-10"></td>
+                <td class="px-10"></td>
+                <td class="px-10"></td>
+                <td class="px-10"></td>
+                <td class="px-10"></td>
+                <td class="bg-base px-2"></td>
+            </tr>
+            <tr class="h-7">
+                <td class="bg-base text-white px-2">Tiết 15</td>
+                <td class="px-10"></td>
+                <td class="px-10"></td>
+                <td class="px-10"></td>
+                <td class="px-10"></td>
+                <td class="px-10"></td>
+                <td class="px-10"></td>
+                <td class="px-10"></td>
+                <td class="bg-base px-2"></td>
+            </tr>
+            <tr class="h-7">
+                <td class="bg-base text-white px-2">Tiết 16</td>
+                <td class="px-10"></td>
+                <td class="px-10"></td>
+                <td class="px-10"></td>
+                <td class="px-10"></td>
+                <td class="px-10"></td>
+                <td class="px-10"></td>
+                <td class="px-10"></td>
+                <td class="bg-base px-2"></td>
+            </tr>
+            <tr class="h-7">
+                <td class="text-base px-2"><i class="fa fa-long-arrow-left"></i> Trước</td>
+                <td class="bg-base text-white px-10">Thứ 2</td>
+                <td class="bg-base text-white px-10">Thứ 3</td>
+                <td class="bg-base text-white px-10">Thứ 4</td>
+                <td class="bg-base text-white px-10">Thứ 5</td>
+                <td class="bg-base text-white px-10">Thứ 6</td>
+                <td class="bg-base text-white px-10">Thứ 7</td>
+                <td class="bg-base text-white px-10">Chủ Nhật</td>
+                <td class="text-base px-2">Sau <i class="fa fa-long-arrow-right"></i></td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>
